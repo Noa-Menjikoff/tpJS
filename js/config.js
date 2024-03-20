@@ -1,1 +1,1 @@
-export const ENDPOINT = 'http://localhost:3000/anime';
+export const ENDPOINT = 'http://localhost:3000/champions';

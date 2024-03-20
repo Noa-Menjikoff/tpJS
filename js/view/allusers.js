@@ -2,15 +2,15 @@ import UserProvider from "../services/userprovider.js";
 
 export default class AllUsers {
   async render3() {
-    let animes = await UserProvider.fetchUsers();
+    let champions = await UserProvider.fetchUsers();
     let view = `
       <ul>
-      ${animes.map( anime =>
+      ${champions.map( champion =>
         `<li>
           <div class="card">
-            <img src="${anime.img}" ">
-            <h3>${anime.name}</h3>
-            <a href="#/mangas/${anime.id}" class="btn btn-sm btn-outline-secondary">Voir +</a>
+            <img src="${champion.icon}" ">
+            <h3>${champion.name}</h3>
+            <a href="#/mangas/${champion.id}" class="btn btn-sm btn-outline-secondary">Voir +</a>
           </div>
         </li>`
         ).join('\n ')

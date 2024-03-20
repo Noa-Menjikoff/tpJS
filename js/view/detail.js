@@ -7,8 +7,8 @@ async render3() {
     let post = await UserProvider.getAnime(request.id)
     return `
     <section class="information">
+    <img src="${post.icon}" ">
     <p> ${post.name} </p>
-    <p> tessssssssssssssssssssst </p>
     </section>
     <p><a href = '/'>Back to home</a></p>`;
   
