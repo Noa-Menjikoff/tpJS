@@ -9,7 +9,7 @@ export default class AllUsers {
         `<li>
           <div class="card">
             <img src="${champion.icon}" ">
-            <h3 id="search">${champion.name}</h3>
+            <h3>${champion.name}</h3>
             <a href="#/mangas/${champion.id}" class="btn btn-sm btn-outline-secondary">Voir +</a>
           </div>
         </li>`
