@@ -17,7 +17,7 @@ async render3() {
             ).join('\n ')
         }
     </ul>
-    <p> Statistiques : </p>
+    <div class="stats-container">
     <p> Attaque de départ : ${post.stats.attackdamage}</p>
     <p> Point de vie de départ : ${post.stats.hp}</p>
     <p> Croissance de point de vie par niveau : ${post.stats.hpperlevel}</p>
@@ -26,6 +26,7 @@ async render3() {
     <p> Résitance magique de départ : ${post.stats.spellblock}</p>
     <p> Vitesse d'attaque : ${post.stats.attackspeed}</p>
     <p> Portée de l'attaque : ${post.stats.attackrange}</p>
+    </div>
     </section>
     <p><a href = '/'>Back to home</a></p>`;
   

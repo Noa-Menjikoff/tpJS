@@ -33,6 +33,13 @@
   }
   
   .information a {
-    color: #007bff; /* Couleur bleue pour les liens */
+    color: #007bff;
   }
+
+  .stats-container {
+    text-align: center;
+    margin: 20px auto;
+    max-width: 600px; 
+  }
+  
   
