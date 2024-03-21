@@ -4,6 +4,9 @@ export default class AllUsers {
   async render3() {
     let champions = await UserProvider.fetchUsers();
     let view = `
+      <div class="search">
+        <input type="text" id="searchBar" placeholder="Recherche par name" oninput="searchByName()">
+      </div>
       <ul class="liste">
       ${champions.map( champion =>
         `<li>
