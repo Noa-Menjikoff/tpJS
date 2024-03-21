@@ -11,6 +11,7 @@ async render3() {
     <p> ${post.name} </p>
     <p> ${post.title}</p>
     <p> ${post.description}</p>
+    <a href="https://www.leagueoflegends.com/fr-fr/champions/${post.id}" >Voir plus</a>
     <ul>
         ${post.tags.map( genre =>
             `<li> ${genre} </li>`
@@ -18,17 +19,20 @@ async render3() {
         }
     </ul>
     <div class="stats-container">
-    <p> Attaque de départ : ${post.stats.attackdamage}</p>
-    <p> Point de vie de départ : ${post.stats.hp}</p>
-    <p> Croissance de point de vie par niveau : ${post.stats.hpperlevel}</p>
+    <p> Attaque : ${post.stats.attackdamage}</p>
+    <p> Puissance magique : ${0}</p>
+    <p> Point de vie : ${post.stats.hp}</p>
     <p> Vitesse de mouvement : ${post.stats.movespeed}</p>
-    <p> Armure de départ : ${post.stats.armor}</p>
-    <p> Résitance magique de départ : ${post.stats.spellblock}</p>
+    <p> Armure : ${post.stats.armor}</p>
+    <p> Résitance magique : ${post.stats.spellblock}</p>
     <p> Vitesse d'attaque : ${post.stats.attackspeed}</p>
     <p> Portée de l'attaque : ${post.stats.attackrange}</p>
     </div>
+    <div class="build-container">
+    <a id="build" href = '/'><button>Créer un équipement</button></a>
+    </div>
     </section>
-    <p><a href = '/'>Back to home</a></p>`;
+    <a href = '/'><button>Back to home</button></a>`;
   
     }
 }

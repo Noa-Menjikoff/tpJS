@@ -1,45 +1,63 @@
 .information {
-    background-color: #f9f9f9;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 600px;
-  }
-  
-  .information img {
-    width: 100px; 
-    border-radius: 50%; 
-    display: block;
-    margin: 0 auto 20px; 
-  }
-  
-  .information p {
-    font-size: 16px;
-    line-height: 1.6;
-  }
-  
-  .information ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .information ul li {
-    display: inline-block;
-    margin-right: 10px;
-    background-color: #ddd;
-    padding: 5px 10px;
-    border-radius: 3px;
-  }
-  
-  .information a {
-    color: #007bff;
-  }
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 600px;
+}
 
+.information img {
+  width: 100px; /* Ajustez la taille de l'image selon vos besoins */
+  border-radius: 50%; /* Pour une image ronde */
+  display: block;
+  margin: 0 auto 20px; /* Centrer l'image avec un espace en dessous */
+}
+
+.information p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.information ul {
+  list-style: none;
+  padding: 0;
+}
+
+.information ul li {
+  display: inline-block;
+  margin-right: 10px;
+  background-color: #ddd;
+  padding: 5px 10px;
+  border-radius: 3px;
+}
+
+.information a {
+  color: #007bff; /* Couleur bleue pour les liens */
+}
+/* CSS pour les boutons */
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  /* Effet hover pour les boutons */
+  button:hover {
+    background-color: #0056b3;
+  }
+  
   .stats-container {
     text-align: center;
     margin: 20px auto;
-    max-width: 600px; 
+    max-width: 600px; /* Ajustez la largeur selon vos besoins */
   }
-  
+  /* CSS spécifique pour le bouton "Créer un équipement" */
+  #build button {
+    display: block;
+    margin: 0 auto; /* Centre le bouton horizontalement */
+  }
   
