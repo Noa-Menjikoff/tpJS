@@ -4,7 +4,7 @@ export default class AllUsers {
   async render3() {
     let champions = await UserProvider.fetchUsers();
     let view = `
-      <ul>
+      <ul class="liste">
       ${champions.map( champion =>
         `<li>
           <div class="card">
