@@ -60,13 +60,3 @@ li{
     border: black solid 1px;    
 }
 
-searchBar {
-    font-size: 2.4rem;
-    width: 25rem;
-    height: 5rem;
-    border: none;
-    border-radius: 10rem;
-    padding: 2rem;
-    transition: all .2s;
-    transition-delay: .1s;
-  }
