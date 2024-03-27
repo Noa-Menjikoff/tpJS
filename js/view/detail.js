@@ -1,10 +1,10 @@
-import UserProvider from "../services/userprovider.js";
+import UserProvider from "../services/championprovider.js";
 import Utils from '../services/Utils.js'
 
 export default class Detail {
 async render3() {
     let request = Utils.parseRequestURL()
-    let post = await UserProvider.getAnime(request.id)
+    let post = await UserProvider.getChampion(request.id)
     return `
     <section class="information">
     <img src="${post.icon}" ">
