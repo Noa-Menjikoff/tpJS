@@ -1,7 +1,7 @@
 import UserProvider from "../services/userprovider.js";
 import Utils from '../services/Utils.js'
 
-export default class AllUsers {
+export default class Detail {
 async render3() {
     let request = Utils.parseRequestURL()
     let post = await UserProvider.getAnime(request.id)

@@ -1,4 +1,4 @@
-import AllUsers from "./view/allusers.js";
+import AllChampion from "./view/allChampion.js";
 import Home from "./view/home.js";
 import Detail from "./view/detail.js";
 import Utils from "./services/Utils.js";
@@ -8,8 +8,8 @@ import Error404 from "./view/error404.js";
 const routes = {
   '/': Home,
   '/about': About,
-  '/mangas': AllUsers,
-  '/mangas/:id': Detail, // New route
+  '/champions': AllChampion,
+  '/champions/:id': Detail, // New route
   
 };
 
