@@ -12,7 +12,7 @@ export default class UserProvider {
         }
     }
 
-    static getAnime = async (id) => {
+    static getChampion = async (id) => {
         const options = {
            method: 'GET',
            headers: {
