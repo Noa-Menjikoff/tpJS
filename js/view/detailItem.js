@@ -11,7 +11,6 @@ async render3() {
     <p> ${post.name} </p>
     <p> ${post.title}</p>
     <p> ${post.description}</p>
-    <a href="https://www.leagueoflegends.com/fr-fr/champions/${post.id}" >Voir plus</a>
     <ul>
         ${post.tags.map( genre =>
             `<li> ${genre} </li>`

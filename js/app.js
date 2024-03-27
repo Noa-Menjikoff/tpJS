@@ -3,6 +3,7 @@ import AllItem from "./view/allItem.js";
 import Home from "./view/home.js";
 import Detail from "./view/detail.js";
 import DetailItem from "./view/detailItem.js";
+import Favoris from "./view/favoris.js";
 import Utils from "./services/Utils.js";
 import About from "./view/about.js";
 import Error404 from "./view/error404.js";
@@ -12,6 +13,7 @@ const routes = {
   '/about': About,
   '/champions': AllChampion,
   '/items': AllItem,
+  '/favoris': Favoris,
   '/items/:id': DetailItem,
   '/champions/:id': Detail, // New route
   
