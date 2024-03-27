@@ -1,8 +1,8 @@
-import UserProvider from "../services/itemprovider.js";
+import ItemProvider from "../services/itemprovider.js";
 
 export default class AllItem {
   async render3() {
-    let items = await UserProvider.fetchUsers();
+    let items = await ItemProvider.fetchUsers();
     let view = `
       <div class="search">
         <input type="text" id="searchBar" placeholder="Recherche par name" oninput="searchByName()">

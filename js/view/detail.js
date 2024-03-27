@@ -1,10 +1,10 @@
-import UserProvider from "../services/championprovider.js";
+import ChampionProvider from "../services/championprovider.js";
 import Utils from '../services/Utils.js'
 
 export default class Detail {
 async render3() {
     let request = Utils.parseRequestURL()
-    let post = await UserProvider.getChampion(request.id)
+    let post = await ChampionProvider.getChampion(request.id)
     return `
     <section class="information">
     <img src="${post.icon}" ">
@@ -29,7 +29,7 @@ async render3() {
     <p> Portée de l'attaque : ${post.stats.attackrange}</p>
     </div>
     <div class="build-container">
-    <a id="build" href = '/'><button>Créer un équipement</button></a>
+    <a id="build" href ='#/build/${post.id}' class="btn btn-sm btn-outline-secondary"><button>Créer un équipement</button></a>
     </div>
     </section>
     <a href = '/'><button>Back to home</button></a>`;

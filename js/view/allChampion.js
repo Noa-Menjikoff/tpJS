@@ -1,8 +1,8 @@
-import UserProvider from "../services/championprovider.js";
+import ChampionProvider from "../services/championprovider.js";
 
 export default class AllChampion {
   async render3() {
-    let champions = await UserProvider.fetchUsers();
+    let champions = await ChampionProvider.fetchUsers();
     let view = `
       <div class="search">
         <input type="text" id="searchBar" placeholder="Recherche par name" oninput="searchByName()">
