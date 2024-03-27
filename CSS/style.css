@@ -60,3 +60,7 @@ li{
     border: black solid 1px;    
 }
 
+.favoris{
+    width: 30px;
+    cursor: pointer;
+}

@@ -11,6 +11,7 @@ export default class AllChampion {
       ${champions.map( champion =>
         `<li>
           <div class="card">
+          <img src="./IMG/favori.png" class="favoris" id="${champion.id}">
             <img src="${champion.icon}" ">
             <h3>${champion.name}</h3>
             <a href="#/champions/${champion.id}" class="btn btn-sm btn-outline-secondary">Voir +</a>
