@@ -1,6 +1,6 @@
 import { ITEMS } from "../config.js";
 
-export default class UserProvider {
+export default class ItemProvider {
     static fetchUsers = async () => {
         try {
             const response = await fetch(ITEMS);

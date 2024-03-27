@@ -1,6 +1,6 @@
 import { ENDPOINT } from "../config.js";
 
-export default class UserProvider {
+export default class ChampionProvider {
     static fetchUsers = async () => {
         try {
             const response = await fetch(ENDPOINT);

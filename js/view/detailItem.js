@@ -1,10 +1,10 @@
-import UserProvider from "../services/itemprovider.js";
+import ItemProvider from "../services/itemprovider.js";
 import Utils from '../services/Utils.js'
 
 export default class DetailItem {
 async render3() {
     let request = Utils.parseRequestURL()
-    let post = await UserProvider.getIttem(request.id)
+    let post = await ItemProvider.getIttem(request.id)
     return `
     <section class="information">
     <img src="${post.icon}" ">

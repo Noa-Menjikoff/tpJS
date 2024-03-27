@@ -17,12 +17,15 @@
             <li><a href="#/champions">Champions</a></li>
             <li><a href="#/items">Items</a></li>
             <li><a href="#/favoris">Favoris</a></li>
+            <h1 onclick="vider()">vider</h1>
           </ul>
         </nav>
       </header>
     <div id="content"> </div>
     
     <script>
+        
+
         function searchByName() {
             const searchBar = document.getElementById('searchBar');
             const listItems = document.querySelectorAll('ul li');
@@ -44,6 +47,31 @@
                 }
             }
         }
+
+        
+
+        function addToFavorites(championId) {
+            addChampionIdToFavorites(championId);
+        }
+
+        function addChampionIdToFavorites(championId) {
+            let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+            if (!favorites.includes(championId)) {
+                favorites.push(championId);
+                localStorage.setItem('favorites', JSON.stringify(favorites));
+                console.log(`Champion avec l'ID "${championId}" ajouté aux favoris.`);
+            } else {
+                console.log(`Champion avec l'ID "${championId}" est déjà dans les favoris.`);
+            }
+            console.log(favorites)
+        }
+
+        function vider(){
+            localStorage.clear();
+
+        }
+        
+
     </script>
     
 </body>
