@@ -17,7 +17,6 @@
             <li><a href="#/champions">Champions</a></li>
             <li><a href="#/items">Items</a></li>
             <li><a href="#/favoris">Favoris</a></li>
-            <h1 onclick="vider()">vider</h1>
           </ul>
         </nav>
       </header>
@@ -52,6 +51,7 @@
 
         function addToFavorites(championId) {
             addChampionIdToFavorites(championId);
+            location.reload();
         }
 
         function addChampionIdToFavorites(championId) {
@@ -68,9 +68,21 @@
 
         function vider(){
             localStorage.clear();
-
+            location.reload();
         }
-        
+
+        function supprimer(championId) {
+            let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+            if (favorites.includes(championId)) {
+                favorites.splice(favorites.indexOf(championId), 1);
+                localStorage.setItem('favorites', JSON.stringify(favorites));
+                console.log(`Champion avec l'ID "${championId}" supprimé des favoris.`);
+                location.reload(); 
+            } else {
+                console.log(`Champion avec l'ID "${championId}" n'est pas dans les favoris.`);
+            }
+            console.log(favorites)
+        }
 
     </script>
     

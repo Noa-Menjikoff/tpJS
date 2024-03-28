@@ -9,7 +9,8 @@ export default class Favoris {
     
     let view = `
       <h2>Favoris</h2>
-      <ul class="liste-favoris">
+      <h1 onclick="vider()" class="vider">vider</h1>
+      <ul class="liste">
         ${champions.join('\n')}
       </ul>
     `;
@@ -27,9 +28,10 @@ export default class Favoris {
     return `
       <li>
         <div class="card">
+          <img src="./IMG/poubelle.png" class="poubelle" onclick="supprimer('${champion.id}')">
           <img src="${champion.icon}" ">
           <h3>${champion.name}</h3>
-          <p>${champion.description}</p>
+          <p>${champion.name}</p>
           <a href="#/champions/${champion.id}" class="btn btn-sm btn-outline-secondary">Voir +</a>
         </div>
       </li>`;
