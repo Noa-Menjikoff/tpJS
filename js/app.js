@@ -1,7 +1,6 @@
 import AllChampion from "./view/allChampion.js";
 import AllItem from "./view/allItem.js";
 import Build from "./view/build.js";
-import ItemBuild from "./view/itemBuild.js";
 import Home from "./view/home.js";
 import Detail from "./view/detail.js";
 import DetailItem from "./view/detailItem.js";
@@ -19,7 +18,6 @@ const routes = {
   '/items/:id': DetailItem,
   '/champions/:id': Detail,
   '/build/:id': Build,
-  '/itemBuild/:id': ItemBuild,
 };
 
 
