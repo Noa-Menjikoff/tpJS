@@ -1,4 +1,4 @@
-import UserProvider from "../services/championprovider.js";
+import ChampionProvider from "../services/championprovider.js";
 
 export default class About {
     async render3() {
