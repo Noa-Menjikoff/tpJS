@@ -1,7 +1,5 @@
 import ChampionProvider from "../services/championprovider.js";
 
-
-
 export default class AllChampion {
   async render3() {
     let champions = await ChampionProvider.fetchUsers();

@@ -4,7 +4,7 @@
   border-radius: 5px;
   padding: 20px;
   margin: 20px auto;
-  max-width: 600px;
+  max-width: 500px;
 }
 
 .information img {
@@ -61,3 +61,39 @@ button {
     margin: 0 auto; /* Centre le bouton horizontalement */
   }
   
+  .champion-build-container{
+    margin-top: 10vh;
+    display: flex;
+    height: 70vh;
+  }
+  .build-container {
+    max-width: 40vw; /* Ajustez selon vos besoins */
+    margin: 20px auto;
+}
+
+.informations {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.build-container img {
+  height : 100px;
+    width: 100px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+.items_build {
+  height: 60vh;
+  max-width: 60vw;
+  overflow-y: auto; /* Ajoute une barre de défilement si nécessaire */
+  margin-left: 20px; /* Espacement entre la section d'informations et la liste des items */
+  flex: 1; /* Laisse l'espace disponible pour la liste des items */
+}
+
+.scrollable-list {
+    padding: 10px;
+}
