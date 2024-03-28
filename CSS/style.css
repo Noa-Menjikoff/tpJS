@@ -64,3 +64,12 @@ li{
     width: 30px;
     cursor: pointer;
 }
+
+.poubelle{
+    width: 30px;
+    cursor: pointer;
+}
+
+.vider{
+    cursor: pointer;
+}

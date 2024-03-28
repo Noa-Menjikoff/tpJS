@@ -23,6 +23,8 @@
     <div id="content"> </div>
     
     <script>
+        
+
         function searchByName() {
             const searchBar = document.getElementById('searchBar');
             const listItems = document.querySelectorAll('ul li');
@@ -44,6 +46,44 @@
                 }
             }
         }
+
+        
+
+        function addToFavorites(championId) {
+            addChampionIdToFavorites(championId);
+            location.reload();
+        }
+
+        function addChampionIdToFavorites(championId) {
+            let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+            if (!favorites.includes(championId)) {
+                favorites.push(championId);
+                localStorage.setItem('favorites', JSON.stringify(favorites));
+                console.log(`Champion avec l'ID "${championId}" ajouté aux favoris.`);
+            } else {
+                console.log(`Champion avec l'ID "${championId}" est déjà dans les favoris.`);
+            }
+            console.log(favorites)
+        }
+
+        function vider(){
+            localStorage.clear();
+            location.reload();
+        }
+
+        function supprimer(championId) {
+            let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+            if (favorites.includes(championId)) {
+                favorites.splice(favorites.indexOf(championId), 1);
+                localStorage.setItem('favorites', JSON.stringify(favorites));
+                console.log(`Champion avec l'ID "${championId}" supprimé des favoris.`);
+                location.reload(); 
+            } else {
+                console.log(`Champion avec l'ID "${championId}" n'est pas dans les favoris.`);
+            }
+            console.log(favorites)
+        }
+
     </script>
     
 </body>
