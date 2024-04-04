@@ -27,4 +27,30 @@ export default class ChampionProvider {
            console.log('Error getting documents', err)
        }
     }
+
+    static addItemIdToChampion = async (championId, itemId) => {
+        const champion = await this.getChampion(championId);
+        if (!champion) {
+            console.log('Champion not found');
+            return;
+        }
+        if (!champion.items) {
+            champion.items = [];
+        }
+        champion.items.push(itemId);
+        const options = {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(champion)
+        };
+        try {
+            const response = await fetch(`${ENDPOINT}/` + championId, options);
+            const json = await response.json();
+            return json;
+        } catch (err) {
+            console.log('Error updating champion', err);
+        }
+    }
 }

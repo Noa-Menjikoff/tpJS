@@ -30,7 +30,7 @@ async render3() {
                   <div class="card">
                     <img src="${item.icon}" ">
                     <h3>${item.name}</h3>
-                    <a href="/" class="btn btn-sm btn-outline-secondary">Ajouter</a>
+                    <pclass="btn btn-sm btn-outline-secondary" onclick="">Ajouter</p>
                   </div>
                 </li>`
                 ).join('\n ')
@@ -39,7 +39,15 @@ async render3() {
             </div>
           </div>
     </div>
+    
     <a href = '/champions'><button>Back to home</button></a>`;
   
     }
+
+    addItem(post,item) {
+      console.log(post);
+      ChampionProvider.addItemIdToChampion(post.id,item.id);
+    }
 }
+
+
