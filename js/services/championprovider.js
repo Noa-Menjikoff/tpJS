@@ -28,13 +28,13 @@ export default class ChampionProvider {
        }
     }
 
-    static addItemIdToChampion = async (championId, itemId) => {
-        const champion = await this.getChampion(championId);
+    static addItemIdToChampion = async (champion, itemId) => {
         if (!champion) {
             console.log('Champion not found');
             return;
         }
         if (!champion.items) {
+            console.log('iciciciciciciciciciccicicicic')
             champion.items = [];
         }
         champion.items.push(itemId);
@@ -46,7 +46,7 @@ export default class ChampionProvider {
             body: JSON.stringify(champion)
         };
         try {
-            const response = await fetch(`${ENDPOINT}/` + championId, options);
+            const response = await fetch(`${ENDPOINT}/` + champion.id, options);
             const json = await response.json();
             return json;
         } catch (err) {
