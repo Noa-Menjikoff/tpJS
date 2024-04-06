@@ -5,39 +5,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="module" src="js/app.js"></script>
     <link rel="stylesheet" href="CSS/style.css"></link>
+    <link rel="stylesheet" href="CSS/detail.css"></link>
     <title>Document</title>
 </head>
 <body>
     <header>
         <nav>
-          <ul>
+          <ul class="nav">
+            <li><a href="/">Home</a></li>
             <li><a href="#/about">About</a></li>
-            <li><a href="#/mangas">Mangas</a></li>
+            <li><a href="#/champions">Champions</a></li>
+            <li><a href="#/items">Items</a></li>
+            <li><a href="#/favoris">Favoris</a></li>
           </ul>
         </nav>
       </header>
-    <input type="text" id="searchBar" placeholder="Recherhce par name" oninput="searchByName()">
     <div id="content"> </div>
     
     <script>
+        
+
         function searchByName() {
             const searchBar = document.getElementById('searchBar');
             const listItems = document.querySelectorAll('ul li');
-
+    
             const entré = searchBar.value.toLowerCase();
-
+    
             for (let i = 0; i < listItems.length; i++) {
                 const item = listItems[i];
-                const name = item.querySelector('h3').textContent.toLowerCase();
-
-                if (name.includes(entré)) {
-                    item.style.display = 'block';
-                } else {
-                    item.style.display = 'none';
+                const h3Element = item.querySelector('h3');
+                
+                if (h3Element) {
+                    const name = h3Element.textContent.toLowerCase();
+    
+                    if (name.includes(entré)) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
                 }
-            };
+            }
         }
+
+        
+
+        function addToFavorites(championId) {
+            addChampionIdToFavorites(championId);
+            location.reload();
+        }
+
+        function addChampionIdToFavorites(championId) {
+            let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+            if (!favorites.includes(championId)) {
+                favorites.push(championId);
+                localStorage.setItem('favorites', JSON.stringify(favorites));
+                console.log(`Champion avec l'ID "${championId}" ajouté aux favoris.`);
+            } else {
+                console.log(`Champion avec l'ID "${championId}" est déjà dans les favoris.`);
+            }
+            console.log(favorites)
+        }
+
+        function vider(){
+            localStorage.clear();
+            location.reload();
+        }
+
+        function supprimer(championId) {
+            let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+            if (favorites.includes(championId)) {
+                favorites.splice(favorites.indexOf(championId), 1);
+                localStorage.setItem('favorites', JSON.stringify(favorites));
+                console.log(`Champion avec l'ID "${championId}" supprimé des favoris.`);
+                location.reload(); 
+            } else {
+                console.log(`Champion avec l'ID "${championId}" n'est pas dans les favoris.`);
+            }
+            console.log(favorites)
+        }
+
     </script>
+    
 </body>
 </html>
 </body>

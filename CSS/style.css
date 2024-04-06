@@ -1,4 +1,83 @@
+body{
+    margin: 0;
+    padding: 0;
+}
 
+.liste{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+}
 
+.liste li{
+    list-style: none;
+    margin: 20px;
+}
 
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    width: 15vw;
+}
 
+li{
+    list-style: none;
+}
+
+.nav{
+    display: flex;
+    background-color: #333;
+    padding: 15px;
+    margin: 0;
+}
+
+.nav li{
+    margin-left: 20px;
+}
+
+.nav li a{
+    color: white;
+    text-decoration: none;
+}
+
+.search{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+#searchBar{
+    padding: 10px;
+    border-radius:10rem;
+    outline: none;
+    border: black solid 1px;    
+}
+
+.favoris{
+    width: 30px;
+    cursor: pointer;
+}
+
+.poubelle{
+    width: 30px;
+    cursor: pointer;
+}
+
+.vider{
+    cursor: pointer;
+}
+
+a button{
+    margin: 10px;
+}
+
+h2{
+    margin: 10px;
+}

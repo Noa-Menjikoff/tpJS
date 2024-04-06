@@ -1,9 +1,9 @@
-import { ENDPOINT } from "../config.js";
+import { ITEMS } from "../config.js";
 
-export default class UserProvider {
+export default class ItemProvider {
     static fetchUsers = async () => {
         try {
-            const response = await fetch(ENDPOINT);
+            const response = await fetch(ITEMS);
             const json = await response.json();
             return json;
         }
@@ -12,7 +12,7 @@ export default class UserProvider {
         }
     }
 
-    static getAnime = async (id) => {
+    static getIttem = async (id) => {
         const options = {
            method: 'GET',
            headers: {
@@ -20,7 +20,7 @@ export default class UserProvider {
            }
        };
        try {
-           const response = await fetch(`${ENDPOINT}/` + id, options)
+           const response = await fetch(`${ITEMS}/` + id, options)
            const json = await response.json();
            return json
        } catch (err) {
